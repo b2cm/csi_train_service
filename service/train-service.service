@@ -1,0 +1,11 @@
+[Unit]
+Description=running the train-service nodejs application
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/train-service
+ExecStart=/usr/local/bin/node server.js
+Restart=on-failure
+
